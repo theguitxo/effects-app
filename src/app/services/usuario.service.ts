@@ -14,4 +14,9 @@ export class UsuarioService {
     return this.http.get(`${this.url}/users`)
       .pipe(map(respuesta => respuesta['data']));
   }
+
+  getUserById(id: string) {
+    return this.http.get(`${this.url}/users/${id}`)
+      .pipe(map(respuesta => respuesta['data']));
+  }
 }
